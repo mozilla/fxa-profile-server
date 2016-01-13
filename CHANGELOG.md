@@ -1,3 +1,12 @@
+<a name="0.50.2"></a>
+### 0.50.2 (2016-01-13)
+
+
+#### Bug Fixes
+
+* **server:** profile scope is more selectively inserted into routes ([2efff53b](https://github.com/mozilla/fxa-profile-server/commit/2efff53bdbfe1f06d1c7f6409743e241d0fba36a))
+
+
 <a name="0.50.1"></a>
 ### 0.50.1 (2015-12-01)
 
