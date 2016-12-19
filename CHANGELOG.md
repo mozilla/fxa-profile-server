@@ -1,3 +1,13 @@
+<a name="0.75.1"></a>
+## [0.75.1](https://github.com/mozilla/fxa-profile-server/compare/v0.75.0...v0.75.1) (2016-12-19)
+
+
+### Bug Fixes
+
+* **avatars:** only delete avatars if avatars set ([5c044c7](https://github.com/mozilla/fxa-profile-server/commit/5c044c7))
+
+
+
 <a name="0.75.0"></a>
 # [0.75.0](https://github.com/mozilla/fxa-profile-server/compare/v0.74.0...v0.75.0) (2016-11-30)
 
