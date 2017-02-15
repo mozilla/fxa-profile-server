@@ -4,9 +4,8 @@
   "private": true,
   "description": "Firefox Accounts Profile service.",
   "scripts": {
-    "outdated": "npm outdated --depth 0",
-    "preinstall": "./scripts/check_gm.sh",
-    "shrinkwrap": "npmshrink",
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) {console.error('You must use Yarn to install, not NPM'); process.exit(1)}\" && ./scripts/check_gm.sh",
+    "shrinkwrap": "yarn install",
     "start": "scripts/run_dev.js",
     "test": "grunt test --node-env=test"
   },
@@ -49,9 +48,9 @@
     "jscs-jsdoc": "2.0.0",
     "load-grunt-tasks": "3.5.0",
     "mkdirp": "0.5.1",
+    "mocha": "3.2.0",
     "mocha-text-cov": "0.1.1",
     "nock": "8.0.0",
-    "npmshrink": "1.0.1",
     "pngparse": "2.0.1",
     "rimraf": "2.5.3",
     "sinon": "1.17.5",

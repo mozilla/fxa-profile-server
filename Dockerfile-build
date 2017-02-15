@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:4.8.0
+FROM mhart/alpine-node:base-4.8.0
 
 RUN addgroup -g 10001 app && \
     adduser -D -G app -h /app -u 10001 app
@@ -9,14 +9,15 @@ ADD https://s3.amazonaws.com/dumb-init-dist/v1.2.0/dumb-init_1.2.0_amd64 /usr/lo
 RUN chmod +x /usr/local/bin/dumb-init
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 
+RUN apk add --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ --no-cache yarn
 RUN apk add --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ --no-cache graphicsmagick
 
 USER app
 
-COPY npm-shrinkwrap.json npm-shrinkwrap.json
+COPY yarn.lock yarn.lock
 COPY package.json package.json
 COPY scripts/check_gm.sh scripts/check_gm.sh
 
-RUN npm install --production && rm -rf ~app/.npm /tmp/*
+RUN yarn install --production --pure-lockfile && rm -rf ~app/.cache/yarn /tmp/*
 
 COPY . /app

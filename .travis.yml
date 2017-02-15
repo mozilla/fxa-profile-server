@@ -26,11 +26,9 @@ env:
   - NODE_ENV=test DB=mysql IMG=aws
 
 before_install:
-  - npm config set spin false
   - "mysql -e 'DROP DATABASE IF EXISTS fxa_profile;'"
   - "mysql -e 'CREATE DATABASE fxa_profile;'"
 
 script:
-  - npm run outdated
   - grunt nsp --force # check for vulnerable modules via nodesecurity.io
   - grunt
