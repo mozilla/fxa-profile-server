@@ -4,9 +4,9 @@
   "private": true,
   "description": "Firefox Accounts Profile service.",
   "scripts": {
+    "npmshrink": "npmshrink",
     "outdated": "npm outdated --depth 0",
     "preinstall": "./scripts/check_gm.sh",
-    "shrinkwrap": "npmshrink",
     "start": "scripts/run_dev.js",
     "test": "grunt test --node-env=test"
   },
@@ -24,6 +24,7 @@
     "hapi-hpkp": "1.0.0",
     "inert": "4.0.2",
     "joi": "9.0.4",
+    "mocha": "^3.4.2",
     "mozlog": "2.0.5",
     "mysql": "2.11.1",
     "mysql-patcher": "0.7.0",
@@ -43,7 +44,7 @@
     "grunt-copyright": "0.3.0",
     "grunt-eslint": "18.0.0",
     "grunt-jscs": "3.0.1",
-    "grunt-mocha-test": "0.12.7",
+    "grunt-mocha-test": "^0.13.2",
     "grunt-nsp": "2.3.1",
     "insist": "1.0.0",
     "jscs-jsdoc": "2.0.0",
