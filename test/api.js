@@ -944,7 +944,9 @@ describe('/display_name', function() {
         'abominable ☃',
         // emoji
         '👍',
-        '👍🏼'
+        '👍🏼',
+        '蚋',
+        '鱑'
       ];
       return P.resolve(NAMES).each(function(NAME) {
         mock.token({
