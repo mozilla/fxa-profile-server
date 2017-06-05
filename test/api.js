@@ -948,7 +948,7 @@ describe('/display_name', function() {
         '蚋',
         '鱑',
         '☃ 👍 André Citroën ಠ_ಠ',
-        //'astral symbol 𝌆 🙀'
+        'astral symbol 𝌆 🙀'
       ];
       return P.resolve(NAMES).each(function(NAME) {
         mock.token({
