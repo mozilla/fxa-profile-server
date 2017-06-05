@@ -978,8 +978,7 @@ describe('/display_name', function() {
           });
         }).then(function(res) {
           assert.equal(res.statusCode, 200);
-          // Using JSON.parse() on the payload seems to break the utf8 here..?
-          //assert.equal(JSON.parse(res.payload).displayName, NAME);
+          assert.equal(JSON.parse(res.payload).displayName, NAME);
           assert.equal(res.result.displayName, NAME);
           assertSecurityHeaders(res);
         });
