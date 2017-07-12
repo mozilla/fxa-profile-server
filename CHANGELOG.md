@@ -1,3 +1,16 @@
+<a name="1.90.2"></a>
+## [1.90.2](https://github.com/mozilla/fxa-profile-server/compare/v1.90.0...v1.90.2) (2017-07-12)
+
+
+### Bug Fixes
+
+* **cache:** fix cache config ([aa54b94](https://github.com/mozilla/fxa-profile-server/commit/aa54b94))
+* **cache:** register server method on server creation ([a3d24d7](https://github.com/mozilla/fxa-profile-server/commit/a3d24d7))
+* **node:** update node.js to latest 4 ([1c30bf4](https://github.com/mozilla/fxa-profile-server/commit/1c30bf4))
+* **startup:** exit if server.start() returns an error ([9cbee8e](https://github.com/mozilla/fxa-profile-server/commit/9cbee8e))
+
+
+
 <a name="1.90.1"></a>
 ## [1.90.1](https://github.com/mozilla/fxa-profile-server/compare/v1.90.0...v1.90.1) (2017-06-29)
 
