@@ -158,6 +158,11 @@ their equivalent) can be accessed as multiple sizes. The default size is
 variants, which can accessed by adding the `_small` or `_large` suffix
 to the avatar URL.
 
+If there is no avatar set by the user, then the server will provide a url to a default avatar image.
+Keep in mind that this default url will have an extension `.png`, unlike avatars that are set by users.
+You can access `_small` and `_large` versions by changing the file name to `default_small.png` and `default_large.png`
+
+
 #### Request
 
 ```sh
@@ -171,7 +176,17 @@ curl -v \
 ```json
 {
   "id": "81625c14128d46c2b600e74a017fa4a8",
-  "url": "https://secure.gravatar.com/avatar/6d940dd41e636cc156074109b8092f96"
+  "avatar": "https://secure.gravatar.com/avatar/6d940dd41e636cc156074109b8092f96"
+}
+```
+
+#### Response (no avatar set)
+
+```json
+{
+  "default": true,
+  "id": "00000000000000000000000000000000",
+  "avatar": "https://accounts.firefox.com/images/avatars/default.png"
 }
 ```
 
