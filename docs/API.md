@@ -84,7 +84,7 @@ curl -v \
 {
   "uid": "6d940dd41e636cc156074109b8092f96",
   "email": "user@example.domain",
-  "avatar": "https://secure.gravatar.com/avatar/6d940dd41e636cc156074109b8092f96"
+  "avatar": "https://firefoxusercontent.com/a9bff302615cd015692a099f691205cc"
 }
 ```
 
@@ -169,8 +169,6 @@ curl -v \
 
 #### Response 
 
-> Note: we no longer support Gravatar uploading, but there are entries in the database
-
 ```json
 {
   "id": "a9bff302615cd015692a099f691205cc",
@@ -188,16 +186,6 @@ curl -v \
 }
 ```
 
-#### Response (from Gravatar)
-
-> Note: we no longer support Gravatar uploading, but there are entries in the database
-
-```json
-{
-  "id": "81625c14128d46c2b600e74a017fa4a8",
-  "avatar": "https://secure.gravatar.com/avatar/6d940dd41e636cc156074109b8092f96"
-}
-```
 
 ### POST /v1/avatar/upload
 
