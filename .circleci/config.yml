@@ -29,7 +29,7 @@ jobs:
 
       - run:
           name: Build deployment container image
-          command: docker build -f Dockerfile-build -t fxa-profile-server:build .
+          command: docker build --squash -f Dockerfile-build -t fxa-profile-server:build .
 
       - run:
           name: Build test container image
