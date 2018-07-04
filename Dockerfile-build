@@ -11,7 +11,8 @@ ADD https://s3.amazonaws.com/dumb-init-dist/v1.2.0/dumb-init_1.2.0_amd64 /usr/lo
 RUN chmod +x /usr/local/bin/dumb-init
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 
-RUN apk add --repository http://dl-cdn.alpinelinux.org/alpine/v3.5/community/ --no-cache graphicsmagick git
+RUN apk add --repository http://dl-cdn.alpinelinux.org/alpine/v3.5/community/ --no-cache graphicsmagick && \
+    apk add --repository http://dl-cdn.alpinelinux.org/alpine/v3.5/community/ --no-cache --virtual .build-deps git python make g++
 
 USER app
 
@@ -21,4 +22,8 @@ COPY scripts/check_gm.sh scripts/check_gm.sh
 
 RUN npm install --production && rm -rf ~app/.npm /tmp/*
 
+USER root
+RUN apk del --no-cache .build-deps
+
+USER app
 COPY . /app
